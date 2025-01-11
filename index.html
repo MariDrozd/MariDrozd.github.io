@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My card</title>
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+		html,
+		body {
+			width: 100%;
+			height: 100%;
+		}
+		html {
+			font-size: 14px;
+			background-color: white;
+		}
+		body {
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
+			line-height: 1.5em;
+			overflow-x: hidden; 
+			background-color: white;
+		}
+		h1 {
+			color: white;
+			text-shadow: 1px 1px rgb(0, 128, 128);
+		}
+		.header__h4 {
+			color: white;
+		}
+		.discription__title {
+			text-transform: uppercase;
+		}
+		a {
+			text-decoration: none;
+			color: rgb(102, 205, 170);
+		}
+		.wrapper {
+			height: 100vh;
+			max-width: 1800px;
+			width: 90%;
+			margin: auto;
+			padding: 10px 15px;
+			display: flex;
+			flex-direction: column;
+			background-color: rgb(255, 255, 255);
+		}
+		header {
+			height: 20%;
+			min-height: 100px;
+			flex-grow: 0;
+			flex-shrink: 1;
+			display: flex;
+			justify-content: start;
+		}
+		.header__foto {
+			width: 25%;
+			min-width: 150px;
+			flex-grow: 0;
+			flex-shrink: 1;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: rgb(0, 128, 128);
+		}
+		.header__myfoto {
+			height: 90%;
+			width: auto;
+			max-width: 100%;
+			overflow: hidden;
+			border-radius: 50%;
+			border: 2px solid white;
+			box-shadow: 0px 0px 15px 3px white;
+		}
+		.header__body {
+			flex-grow: 1;
+			flex-shrink: 1;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: white;
+		}
+		.header__title {
+			height: 70%;
+			flex-grow: 1;
+			display: flex;
+			justify-content: left;
+			align-items: center;
+			padding: 15px;
+			background-color: rgb(32, 178, 170);
+			margin-left: -20px;
+		}
+		main {
+			max-height: 75%;
+			flex-grow: 1;
+			flex-shrink: 1;
+			display: flex;
+			color: rgb(47, 79, 79)
+		}
+		.info {
+			width: 25%;
+			height: 100%;
+			min-width: 150px;
+			flex-grow: 0;
+			flex-shrink: 1;
+			display: flex;
+			flex-direction: column;
+			background-color: rgb(0, 128, 128);
+		}
+		.info__list {
+			list-style: none;
+		}
+		.info__list li {
+			margin-bottom: 5px;
+		}
+		.info__style {
+			padding: 15px;
+			color: white;
+			font-size: 12px;
+		}
+		.info_title {
+			display: block;
+			padding-bottom: 5px;
+		}
+		.info__personal{
+			border-top: 2px solid rgb(47, 79, 79);
+			flex-grow: 1;
+			flex-shrink: 1;
+			flex-basis: auto;
+			margin-left: 10px;
+			margin-right: 10px;
+			padding: 5px;
+		}
+		.info__skills {
+			border-top: 2px solid rgb(47, 79, 79);
+			flex-grow: 1;
+			flex-shrink: 1;
+			flex-basis: auto;
+			margin-left: 10px;
+			margin-right: 10px;
+			padding: 5px;
+		}
+		.info__hobby {
+			border-top: 2px solid rgb(47, 79, 79);
+			flex-grow: 1;
+			flex-shrink: 1;
+			flex-basis: auto;
+			margin-left: 10px;
+			margin-right: 10px;
+			padding: 5px;
+		}
+		.info__contact {
+			border-top: 2px solid rgb(47, 79, 79);
+			flex-grow: 1;
+			flex-shrink: 1;
+			flex-basis: auto;
+			margin-left: 10px;
+			margin-right: 10px;
+			padding: 5px;
+		}
+		.discription {
+			flex-grow: 1;
+			flex-shrink: 1;
+			display: flex;
+			flex-direction:column;
+		}
+		.discription__experience {
+			flex-grow: 2;
+			flex-shrink: 1;
+			display: flex;
+			flex-direction: column;
+			justify-content: start;
+			margin: 10px;
+		}
+		.discription_travel {
+			flex-grow: 1;
+			flex-shrink: 1;
+			padding: 30px;
+		}
+		.discription_mts {
+			flex-grow: 1;
+			flex-shrink: 1;
+			padding: 30px;
+		}
+		.discription__education {
+			flex-grow: 1;
+			flex-shrink: 1;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			margin: 10px;
+
+		}
+		.discription_smol {
+			flex-grow: 1;
+			flex-shrink: 1;
+			padding: 30px;
+		}
+		.discription_brya {
+			flex-grow: 1;
+			flex-shrink: 1;
+			padding: 30px;
+		}
+		footer {
+			height: 5%;
+			min-height: 40px;
+			flex-grow: 0;
+			flex-shrink: 1;
+			background-color: rgb(224, 255, 255);
+			color: rgb(47, 79, 79);
+			font-size: 12px;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<figure class="header__foto">
+				<img src="img/Me.jpg" alt="My foto" class="header__myfoto">
+			</figure>
+			<div class="header__body">
+				<div class="header__title">
+					<div class="header__text">
+						<h1> Marina Erashova</h1>
+						<h4 class="header__h4">web-developer</h4>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main>
+			<div class="info">
+				<section class="info__personal info__style">
+					<h3 class="info_title">Personal</h3>
+					<ul class="info__list">
+						<li><b>Name:</b>
+							<p><em>Marina Erashova</em></p>
+						</li>
+						<li><b>Birthday</b>:
+							<p><em>xx.xx.xx</em></p>
+						</li>
+						<li><b>Nationality:</b>
+							<p><em>Russian</em></p>
+						</li>
+						<li><b>Languages:</b>
+							<p><em>Russian, English</em></p>
+						</li>
+					</ul>
+				</section>
+				<section class="info__skills info__style">
+					<h3 class="info_title">Skills</h3>
+					<ul class="info__list">
+						<li>HTML, CSS, Responsive layout</li>
+						<li>JavaScript (ES6+)</li>
+						<li>GitHub</li>
+						<li>Rest API</li>
+					</ul>
+				</section>
+				<section class="info__hobby info__style">
+					<h3 class="info_title">Hobbies</h3>
+					<ul class="info__list">
+						<li>Traveling</li>
+						<li>Dogs</li>
+						<li>Learning Python</li>
+					</ul>
+				</section>
+				<section class="info__contact info__style">
+					<h3 class="info_title">Contacts</h3>
+					<ul class="info__list">
+						<li>Phone number
+							<address>+7910-111-xx-xx</address>
+						</li>
+						<li>E-mail
+							<p><a href="mailto:dog@dog.com">code@code.com</a></p>
+						</li>
+					</ul>
+				</section>
+			</div>
+			<div class="discription">
+				<section class="discription__experience">
+					<h3 class="discription__title">Experience</h3>
+					<section class="discription_travel">
+						<h3>Travel company 12.2022 - present</h3>
+						<h4>Marketing Analyst</h4>
+						<ul>
+							<li>Maintaining statistical reports</li>
+							<li>Analyzing sales performance dynamics</li>
+							<li>Automation of calculation spreadsheets</li>
+							<li>Evaluating the performance and efficiency of advertising campaigns</li>
+						</ul>
+					</section>
+					<section class="discription_mts">
+						<h3>Mobile TeleSystems PJSC (MTS) 05.2012 - 11.2022</h3>
+						<h4>Analyst</h4>
+						<ul>
+							<li>Current and ad hoc reporting</li>
+							<li>Automation of calculation spreadsheets</li>
+							<li>Refinement of Excel macros using the VBA programming language</li>
+						</ul>
+					</section>
+				</section>
+				<section class="discription__education">
+					<h3 class="discription__title">Education</h3>
+					<section class="discription_smol">
+						<h3>Smolensk State University</h3>
+						<h4>Faculty of Economics and Management</h4>
+						<p>2006 - 2011</p>
+					</section>
+					<section class="discription_brya">
+						<h3>Bryansk State Technical University</h3>
+						<h4>Information Technology</h4>
+						<p>2010-2011</p>
+					</section>
+				</section>
+			</div>
+		</main>
+		<footer>
+			<p>&#169; All rights reserved</p>
+		</footer>
+	</div>
+</body>
+</html>
